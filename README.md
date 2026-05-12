@@ -23,7 +23,6 @@
 ## ⚒️ TODO
 
 * [ ] Release code and pretrained models
-* [ ] Test our binarization method on more models
 
 ## 🔎 Method Overview
 
