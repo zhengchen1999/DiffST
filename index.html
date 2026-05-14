@@ -88,25 +88,12 @@
             
                 <!-- ArXiv abstract link -->
                 <span class="link-block">
-                    <!-- TBD -->
-                  <a href="" target="_blank"
+                  <a href="https://arxiv.org/abs/2605.13182" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                  </a>
-                </span>
-            
-                <!-- Supplementary PDF link -->
-                <span class="link-block">
-                    <!-- TBD -->
-                  <a href="" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Supplementary</span>
                   </a>
                 </span>
             
@@ -156,12 +143,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Diffusion-based models have achieved remarkable results in tackling video super-resolution (VSR) and video frame interpolation (VFI). However, their exploration in the combined setting of the two, namely space-time video super-resolution (STVSR), 
-              remains limited. Existing diffusion-based STVSR approaches suffer from two issues: (1) low inference efficiency and (2) insufficient utilization of spatiotemporal information. These limitations hinder their applicability in real-world scenarios. 
-              To address these issues, we propose <STRONG>DiffST</STRONG>, an efficient spatiotemporal-aware video diffusion model for real-world STVSR. To ensure efficiency, we utilize the pre-trained diffusion model in a one-step sampling manner. 
-              Meanwhile, we process the entire video directly rather than operating on individual frames. On the other hand, to enhance spatiotemporal information utilization, we introduce cross-frame context aggregation (CFCA) and video representation guidance (VRG). 
-              The CFCA module aggregates information across multiple keyframes to produce intermediate frames, expanding the scope of spatiotemporal context. The VRG module extracts a global video representation to guide the diffusion process with explicit spatiotemporal cues. 
-              Extensive experiments show that our DiffST achieves state-of-the-art performance on real-world STVSR tasks in terms of fidelity, perceptual quality, and temporal consistency. It also maintains high efficiency, achieving approximately 17× speed-up over existing diffusion-based STVSR methods.
+              Diffusion-based models have shown strong performance in video super-resolution (VSR) and video frame interpolation (VFI). However, their role in the coupled space-time video super-resolution (STVSR) setting remains limited. Existing diffusion-based STVSR approaches suffer from two issues: (1) low inference efficiency and (2) insufficient utilization of spatiotemporal information. These limitations impede deployment. To address these issues, we introduce <strong>DiffST</strong>, an efficient spatiotemporal-aware video diffusion framework for real-world STVSR. To improve efficiency, we adapt a pre-trained diffusion model for one-step sampling and process the entire video directly rather than operating on individual frames. Furthermore, to enhance spatiotemporal information utilization, we introduce cross-frame context aggregation (CFCA) and video representation guidance (VRG). The CFCA module aggregates information across multiple keyframes to produce intermediate frames. The VRG module extracts video-level global features to guide the diffusion process. Extensive experiments show that DiffST obtains leading results on real-world STVSR tasks. It also maintains high inference efficiency, running about 17&times; faster than previous diffusion-based STVSR methods.
             </p>
           </div>
         </div>
@@ -183,7 +165,7 @@
           <div class="content has-text-justified" style="margin-top: 1rem;">
             <p> 
               DiffST performs one-step sampling to process the entire video directly. The <strong>cross-frame context aggregation (CFCA)</strong> module aggregates information from multiple frames to generate intermediate frames. 
-              The <strongrepresentation guidance (VRG)></strong> module extracts a video-level representation to guide the restoration process. To better match real-world conditions, we adopt multiple spatial degradations, combined with frame subsampling.
+              The <strong>video representation guidance (VRG)</strong> module extracts a video-level representation to guide the restoration process. To better match real-world conditions, we adopt multiple spatial degradations, combined with frame subsampling.
             </p>
           </div>
         </div>
@@ -191,29 +173,6 @@
     </div>
   </section>
   <!-- End Method Section-->
-
-  <!-- Performance Section-->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-five-sixths">
-          <h2 class="title is-3 has-text-left">Performance</h2>
-          <figure>
-            <img src="static/figs/performance-2.png" alt="ST-VSR Performance Comparison" style="margin-bottom: 8px;">
-            <img src="static/figs/performance-1.png" alt="ST-VSR Performance Comparison">
-            <figcaption class="title is-5">Performance Comparison With Other ST-VSR methods</figcaption>
-          </figure>
-          <div class="content has-text-justified" style="margin-top: 1rem;">
-            <p>
-              The proposed DiffST achieves superior performance in terms of fidelity, consistency, and efficiency. 
-              In addition, compared with the multi-step STVSR method, VEnhancer, DiffST achieves approximately 17× faster inference speedup.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Performance Section-->
 
   <!-- Results Section -->
   <section class="section hero is-small">
@@ -229,15 +188,19 @@
                 <p class="has-text-centered">
                   <img src="static/figs/quantitative.png" >
                 </p>
+                <ul><li class="title is-6">Complexity Comparison (Tab. 5 of the main paper)</li></ul>
+                <p class="has-text-centered">
+                  <img src="static/figs/performance-2.png" alt="ST-VSR Performance Comparison">
+                </p>
                 <ul>
                   <details>
                     <summary class="title is-6" style="margin-left: -0.8em;">More Results (click to expand)</summary>
                     <div class="content">
-                      <ul><li class="title is-6">Quantitative comparison on more metrics (Tab. 6 of the supplementary material)</li></ul>
+                      <ul><li class="title is-6">Quantitative comparison on more metrics (Tab. 6)</li></ul>
                       <p class="has-text-centered">
                         <img src="static/figs/quantitative-1.png" >
                       </p>
-                      <ul><li class="title is-6">Quantitative comparison with more STVSR methods (Tab. 7 of the supplementary material)</li></ul>
+                      <ul><li class="title is-6">Quantitative comparison with more STVSR methods (Tab. 7)</li></ul>
                       <p class="has-text-centered">
                         <img src="static/figs/quantitative-2.png" >
                       </p>
@@ -253,15 +216,19 @@
                 <p class="has-text-centered">
                   <img src="static/figs/visual.png" >
                 </p>
+                <ul><li class="title is-6">Consistency Comparison (Fig. 6 of the main paper)</li></ul>
+                <p class="has-text-centered">
+                  <img src="static/figs/performance-1.png" alt="ST-VSR Performance Comparison">
+                </p>
                 <ul>
                   <details>
                     <summary class="title is-6" style="margin-left: -0.8em;">More Results (click to expand)</summary>
                     <div class="content">
-                      <ul><li class="title is-6">Visual comparison on synthetic (UDM10 and Vid4) datasets (Fig. 7 of the supplementary material)</li></ul>
+                      <ul><li class="title is-6">Visual comparison on synthetic (UDM10 and Vid4) datasets (Fig. 7)</li></ul>
                       <p class="has-text-centered">
                         <img src="static/figs/visual-1.png" >
                       </p>
-                      <ul><li class="title is-6">Visual comparison on real-world (MVSR4x and RealVSR) datasets (Fig. 8 of the supplementary material)</li></ul>
+                      <ul><li class="title is-6">Visual comparison on real-world (MVSR4x and RealVSR) datasets (Fig. 8)</li></ul>
                       <p class="has-text-centered">
                         <img src="static/figs/visual-2.png" >
                       </p>
@@ -283,10 +250,14 @@
       <div class="columns is-centered has-text-left">
         <div class="column is-five-sixths">
           <h2 class="title">BibTeX</h2>
-            <pre style="background-color: #ffffff; overflow-x: auto; white-space: pre-wrap;">
-              <code>
-              </code>
-            </pre>
+          <pre style="background-color: #ffffff; overflow-x: auto; white-space: pre-wrap;">
+<code>@article{chen2026diffst,
+  title = {DiffST: Spatiotemporal-Aware Diffusion for Real-World Space-Time Video Super-Resolution},
+  author = {Chen, Zheng and Yang, Ruofan and Han, Jin and Song, Dehua and Zou, Zichen and He, Chunming and Guo, Yong and Zhang, Yulun},
+  journal = {arXiv preprint arXiv:2605.13182},
+  year = {2026}
+}</code>
+          </pre>
         </div>
       </div>
     </div>
@@ -308,7 +279,7 @@
       </div>
       <div class="columns is-centered">
           <div class="content has-text-centered">
-            <a href="https://mapmyvisitors.com/web/1c2ad"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=7YRkr2wDvsi-5HPxeg1AuJV4PWf7zgJKcNCPzQs9ty0&cl=ffffff" /></a>
+            <a href="https://mapmyvisitors.com/web/1c4ht"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=O1d7qFryo-NBA2XzRbl_1FyXM7mYnhld8z7E8MgbIWM&amp;cl=ffffff" /></a>
           </div>
         </div>
     </div>
