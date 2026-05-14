@@ -1,6 +1,6 @@
 # Project: DiffST
 
-https://zhengchen1999.github.io/DiffST/
+https://zheng-chen.cn/DiffST/
 
 A one-step diffusion framework for real-world video spatial-temporal super-resolution.
 
